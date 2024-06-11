@@ -9,13 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LATHUKK</title>
+    <title>SISTEM INVENTORY</title>
 
     <!-- Custom fonts for this template-->
     <link href="{!! asset('theme/vendor/fontawesome-free/css/all.min.css') !!}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Custom styles for this template-->
     <link href="{!! asset('theme/css/sb-admin-2.min.css') !!}" rel="stylesheet">
@@ -31,11 +32,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
+                <div class="sidebar-brand-icon">
+                    <i class="fa-solid fa-book-open-reader"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">LATHUKK</div>
+                <div class="sidebar-brand-text mx-3">SINVENT</div>
             </a>
 
             <!-- Divider -->
@@ -44,7 +45,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fa-solid fa-gauge-simple-high"></i>
                     <span>Dashboard</span></a>
             </li>
 
@@ -73,7 +74,7 @@
 
 <li class="nav-item">
     <a class="nav-link collapsed" href="/barang" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-        <i class="fa fa-archive" aria-hidden="true"></i>
+        <i class="fa-solid fa-box" aria-hidden="true"></i>
         <span>Barang</span>
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -86,7 +87,7 @@
 
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <i class="fa-solid fa-circle-arrow-right" aria-hidden="true"></i>
         <span>Barang Masuk</span>
     </a>
     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
@@ -99,7 +100,7 @@
 
 <li class="nav-item">
     <a class="nav-link collapsed" href="{{ route('dashboard') }}" data-toggle="collapse" data-target="#collapseFIve" aria-expanded="true" aria-controls="FIve">
-    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <i class="fa-solid fa-circle-arrow-left" aria-hidden="true"></i>
         <span>Barang Keluar</span>
     </a>
     <div id="collapseFIve" class="collapse" aria-labelledby="headingFIve" data-parent="#accordionSidebar">
@@ -305,7 +306,7 @@
                                     Settings
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fa-solid fa-table-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
                                 </a>
         
@@ -346,7 +347,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Sinvent &copy; 2024</span>
                     </div>
                 </div>
             </footer>

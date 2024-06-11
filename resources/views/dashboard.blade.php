@@ -20,7 +20,7 @@
                     <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $kategori }}</div>
                 </div>
                 <div class="col-auto"> 
-                    <i class="fas fa-list-ol fa-2x text-gray-300"></i>
+                    <i class="fa-solid fa-list fa-2x text-gray-300"></i>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                     <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $barang }}</div>
                 </div>
                 <div class="col-auto">
-                    <i class="fas fa-archive fa-2x text-gray-300"></i>
+                    <i class="fas fa-box fa-2x text-gray-300"></i>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="col-auto">
-                <i class="fas fa-arrow-down fa-2x text-gray-300"></i>
+                <i class="fa-solid fa-circle-arrow-down fa-2x text-gray-300"></i>
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                     <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $barangkeluar }}</div>
                 </div>
                 <div class="col-auto">
-                    <i class="fas fa-arrow-up fa-2x text-gray-300"></i>
+                    <i class="fa-solid fa-circle-arrow-up fa-2x text-gray-300"></i>
                 </div>
             </div>
         </div>
