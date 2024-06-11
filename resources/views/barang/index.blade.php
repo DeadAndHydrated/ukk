@@ -20,9 +20,18 @@
         @endif
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ route('barang.create') }}" class="btn btn-md btn-success mb-3">TAMBAH ITEM</a>
-                    </div>
-
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ route('barang.create') }}" class="btn btn-md btn-success mb-3">TAMBAH BARANG</a>
+                            
+                                    <form action="{{ route('barang.index') }}" method="GET">
+                                        <div class="input-group">
+                                            <input type="text" name="search" class="form-control" placeholder="Search for ..." value="{{ request()->query('search') }}">
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-outline-secondary">Search</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                            </div>
                 </div>
 
 

@@ -10,18 +10,16 @@ class KategoriController extends Controller
 {
     public function index(Request $request)
     {
-        $rsetKategori = Kategori::paginate(10);
-        return view('kategori.index', compact('rsetKategori'));
-
-        if ($request->search) {
-            $rsetKategori = DB::table('kategori')->select('id', 'deskripsi', DB::raw('getKategori(kategori) as kat'))
-                                                 ->where('id', 'like', '%' . $request->search . '%')
-                                                 ->orWhere('deskripsi', 'like', '%' . $request->search . '%')
-                                                 ->orWhere('kategori', 'like', '%' . $request->search . '%')
-                                                 ->paginate(10);
+        $search = $request->query('search');
+        if ($search) {
+            $rsetKategori = Kategori::where('deskripsi', 'like', '%' . $search . '%')
+                                    ->orWhere('kategori', 'like', '%' . $search . '%')
+                                    ->paginate(10);
         } else {
-            $rsetKategori = DB::table('kategori')->select('id', 'deskripsi', DB::raw('getKategori(kategori) as kat')) ->paginate(10);
+            $rsetKategori = Kategori::paginate(10);
         }
+
+        return view('kategori.index', compact('rsetKategori'));
     }
 
     public function create()

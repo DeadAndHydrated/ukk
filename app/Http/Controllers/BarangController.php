@@ -16,6 +16,23 @@ class BarangController extends Controller
 
         return view('barang.index', compact('rsetBarang'))
             ->with('i', (request()->input('page', 1) - 1) * 10);
+
+            $search = $request->query('search');
+        if ($search) {
+            $rsetBarang = Barang::where('merk', 'like', '%' . $search . '%')
+                                    ->orWhere('seri', 'like', '%' . $search . '%')
+                                    ->orWhere('spesifikasi', 'like', '%' . $search . '%')
+                                    ->orWhere('stok', 'like', '%' . $search . '%')
+                                    ->orWhere('kategori_id', 'like', '%' . $search . '%')
+                                    ->orWhereHas('kategori', function($query) use ($search) {
+                                        $query->where('deskripsi', 'like', '%' . $search . '%');
+                                    })
+                                    ->paginate(10);
+        } else {
+            $rsetBarang = Barang::paginate(10);
+        }
+
+        return view('barang.index', compact('rsetBarang'));
     }
 
 
